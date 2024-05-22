@@ -29,17 +29,41 @@ class Task extends StatelessWidget {
         backgroundColor: Colors.amber,
         centerTitle: true,
 
+
+
       actions: [
         IconButton(onPressed: (){},
             icon: const Icon(Icons.search)),
         IconButton(onPressed: (){},
             icon: const Icon(Icons.mail))
       ],
-      leading: IconButton(
-        onPressed: (){},
-        icon: const Icon(Icons.person),
+
+      // leading: IconButton(
+      //   onPressed: (){},
+      //   icon: const Icon(Icons.person),
+      // ),
       ),
-      ),
+
+        drawer: Drawer(
+          child: ListView(
+            children: [
+          DrawerHeader(
+          decoration: BoxDecoration(
+          color: Colors.teal,
+          ),
+          child: UserAccountsDrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.blueGrey,
+            ),
+            accountName: Text('Fardin'),
+            accountEmail: Text('fardinrafi3222@gmail.com'),
+
+          ),
+        ),
+    ],
+    ),
+        ),
+
       body:
       Center(
         child: Column(
